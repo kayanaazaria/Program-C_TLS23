@@ -16,7 +16,7 @@ int main(){
     cout << endl;
     
     char pilihan;
-    float sisi, p_balok, l_balok, t_balok, p_limas, l_limas, t_limas, v_limas, r_kerucut, t_kerucut, r_tabung, t_tabung, r_bola;
+    float sisi, p_balok, l_balok, t_balok, p_limas, l_limas, t_limas, v_limas, r_kerucut, t_kerucut, v_kerucut, r_tabung, t_tabung, v_tabung, r_bola, v_bola;
     cout << "Pilih operasi hitungan: ";
     cin >> pilihan;
 
@@ -50,19 +50,22 @@ int main(){
         cin >> r_kerucut;
         cout << "Tinggi kerucut: ";
         cin >> t_kerucut;
-        cout << "Volume dari kerucut tersebut adalah " << ((0.33)*(3.14)*pow(r_kerucut,2)*t_kerucut) <<".";
+        v_kerucut = ((0.33)*(3.14)*pow(r_kerucut,2)*t_kerucut);
+        cout << "Volume dari kerucut tersebut adalah " << v_kerucut <<".";
         break;
         case 'E':
         cout << "Radius alas tabung: ";
         cin >> r_tabung;
         cout << "Tinggi tabung: ";
         cin >> t_tabung;
-        cout << "Volume tabung tersebut adalah " << ((3.14)*pow(r_tabung,2)*t_tabung) <<".";
+        v_tabung = ((3.14)*pow(r_tabung,2)*t_tabung);
+        cout << "Volume tabung tersebut adalah " << v_tabung <<".";
         break;
         case 'F':
         cout << "Radius bola: ";
         cin >> r_bola;
-        cout << "Volume bola dengan radius " << r_bola << " adalah " << ((1.33)*(3.14)*pow(r_bola,3));
+        v_bola = ((1.33)*(3.14)*pow(r_bola,3));
+        cout << "Volume bola dengan radius " << r_bola << " adalah " << v_bola;
         break;
     }
     return 0;
